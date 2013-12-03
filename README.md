@@ -1,4 +1,5 @@
 mixin-vixen
 ===========
-
-My less mixins
+by:housewithinahouse.com
+--
+A collection of my less mixins

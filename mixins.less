@@ -1,0 +1,384 @@
+/** LESS CSS mixins v.0.1 for less.js v.1.3+
+		by:edwin!(housewithinahouse.com)
+*/
+
+
+
+/*|Text Treatments|*/
+/*+---------------+*/
+
+.three-dee(@colorA:#444, @colorB:#333, @stepX:1, @stepY:1, @blur:0px){
+	text-shadow: 0px*@stepX 1px*@stepY @blur @colorA,  1px*@stepX 0px*@stepY @blur @colorB, 1px*@stepX 2px*@stepY @blur @colorA,  2px*@stepX 1px*@stepY @blur @colorB, 2px*@stepX 3px*@stepY @blur @colorA,  3px*@stepX 2px*@stepY @blur @colorB, 3px*@stepX 4px*@stepY @blur @colorA,  4px*@stepX 3px*@stepY @blur @colorB, 4px*@stepX 5px*@stepY @blur @colorA,  5px*@stepX 4px*@stepY @blur @colorB, 5px*@stepX 6px*@stepY @blur @colorA,  6px*@stepX 5px*@stepY @blur @colorB, 6px*@stepX 7px*@stepY @blur @colorA,  7px*@stepX 6px*@stepY @blur @colorB, 7px*@stepX 8px*@stepY @blur @colorA,  8px*@stepX 7px*@stepY @blur @colorB, 8px*@stepX 9px*@stepY @blur @colorA,  9px*@stepX 8px*@stepY @blur @colorB, 9px*@stepX 10px*@stepY @blur @colorA,  10px*@stepX 9px*@stepY @blur @colorB, 10px*@stepX 11px*@stepY @blur @colorA,  11px*@stepX 10px*@stepY @blur @colorB, 11px*@stepX 12px*@stepY @blur @colorA,  12px*@stepX 11px*@stepY @blur @colorB, 12px*@stepX 13px*@stepY @blur @colorA,  13px*@stepX 12px*@stepY @blur @colorB, 13px*@stepX 14px*@stepY @blur @colorA,  14px*@stepX 13px*@stepY @blur @colorB, 14px*@stepX 15px*@stepY @blur @colorA,  15px*@stepX 14px*@stepY @blur @colorB, 15px*@stepX 16px*@stepY @blur @colorA,  16px*@stepX 15px*@stepY @blur @colorB, 16px*@stepX 17px*@stepY @blur @colorA,  17px*@stepX 16px*@stepY @blur @colorB, 17px*@stepX 18px*@stepY @blur @colorA,  18px*@stepX 17px*@stepY @blur @colorB, 18px*@stepX 19px*@stepY @blur @colorA,  19px*@stepX 18px*@stepY @blur @colorB, 19px*@stepX 20px*@stepY @blur @colorA,  20px*@stepX 19px*@stepY @blur @colorB, 20px*@stepX 21px*@stepY @blur @colorA,  21px*@stepX 20px*@stepY @blur @colorB, 21px*@stepX 22px*@stepY @blur @colorA,  22px*@stepX 21px*@stepY @blur @colorB, 22px*@stepX 23px*@stepY @blur @colorA,  23px*@stepX 22px*@stepY @blur @colorB, 23px*@stepX 24px*@stepY @blur @colorA,  24px*@stepX 23px*@stepY @blur @colorB, 24px*@stepX 25px*@stepY @blur @colorA,  25px*@stepX 24px*@stepY @blur @colorB; }
+
+.outline-text(@outline-color:white, @thickness:1, @blur:0){
+	text-shadow:1px*@thickness 1px*@thickness @blur @outline-color,
+							-1px*@thickness 1px*@thickness @blur @outline-color,
+							-1px*@thickness -1px*@thickness @blur @outline-color,
+							1px*@thickness -1px*@thickness @blur @outline-color;
+}
+.divergent-three-dee(@colorA:#444, @colorB:#333, @stepX:1, @stepY:1, @blur:0){
+	text-shadow:0px*@stepX 1px*@stepY @blur @colorA,
+							1px*@stepY 0px*@stepX @blur @colorB,
+	
+							1px*@stepX 2px*@stepY @blur @colorA,
+							2px*@stepY 1px*@stepX @blur @colorB,
+							
+							2px*@stepX 3px*@stepY @blur @colorA,
+							3px*@stepY 2px*@stepX @blur @colorB,
+							
+							3px*@stepX 4px*@stepY @blur @colorA,
+							4px*@stepY 3px*@stepX @blur @colorB,
+							
+							4px*@stepX 5px*@stepY @blur @colorA,
+							5px*@stepY 4px*@stepX @blur @colorB,
+							
+							5px*@stepX 6px*@stepY @blur @colorA,
+							6px*@stepY 5px*@stepX @blur @colorB,
+							
+							6px*@stepX 7px*@stepY @blur @colorA,
+							7px*@stepY 6px*@stepX @blur @colorB,
+							
+							7px*@stepX 8px*@stepY @blur @colorA,
+							8px*@stepY 7px*@stepX @blur @colorB,
+							
+							8px*@stepX 9px*@stepY @blur @colorA,
+							9px*@stepY 8px*@stepX @blur @colorB,
+							
+							9px*@stepX 10px*@stepY @blur @colorA,
+							10px*@stepY 9px*@stepX @blur @colorB,
+							
+							10px*@stepX 11px*@stepY @blur @colorA,
+							11px*@stepY 10px*@stepX @blur @colorB,
+							
+							11px*@stepX 12px*@stepY @blur @colorA,
+							12px*@stepY 11px*@stepX @blur @colorB,
+							
+							12px*@stepX 13px*@stepY @blur @colorA,
+							13px*@stepY 12px*@stepX @blur @colorB,
+							
+							13px*@stepX 14px*@stepY @blur @colorA,
+							14px*@stepY 13px*@stepX @blur @colorB,
+							
+							14px*@stepX 15px*@stepY @blur @colorA,
+							15px*@stepY 14px*@stepX @blur @colorB,
+							
+							15px*@stepX 16px*@stepY @blur @colorA,
+							16px*@stepY 15px*@stepX @blur @colorB,
+							
+							16px*@stepX 17px*@stepY @blur @colorA,
+							17px*@stepY 16px*@stepX @blur @colorB,
+							
+							17px*@stepX 18px*@stepY @blur @colorA,
+							18px*@stepY 17px*@stepX @blur @colorB,
+							
+							18px*@stepX 19px*@stepY @blur @colorA,
+							19px*@stepY 18px*@stepX @blur @colorB,
+							
+							19px*@stepX 20px*@stepY @blur @colorA,
+							20px*@stepY 19px*@stepX @blur @colorB,;
+}
+
+
+.reverse-three-dee(@colorA:#e00, @colorB:#800, @stepX:1, @stepY:1, @blur:0){
+	text-shadow:19px*@stepX 20px*@stepY @blur @colorA,
+							20px*@stepX 19px*@stepY @blur @colorB,
+							
+							18px*@stepX 19px*@stepY @blur @colorA,
+							19px*@stepX 18px*@stepY @blur @colorB,
+							
+							17px*@stepX 18px*@stepY @blur @colorA,
+							18px*@stepX 17px*@stepY @blur @colorB,
+							
+							16px*@stepX 17px*@stepY @blur @colorA,
+							17px*@stepX 16px*@stepY @blur @colorB,
+							
+							15px*@stepX 16px*@stepY @blur @colorA,
+							16px*@stepX 15px*@stepY @blur @colorB,
+							
+							14px*@stepX 15px*@stepY @blur @colorA,
+							15px*@stepX 14px*@stepY @blur @colorB,
+							
+							13px*@stepX 14px*@stepY @blur @colorA,
+							14px*@stepX 13px*@stepY @blur @colorB,
+							
+							12px*@stepX 13px*@stepY @blur @colorA,
+							13px*@stepX 12px*@stepY @blur @colorB,
+							
+							11px*@stepX 12px*@stepY @blur @colorA,
+							12px*@stepX 11px*@stepY @blur @colorB,
+							
+							10px*@stepX 11px*@stepY @blur @colorA,
+							11px*@stepX 10px*@stepY @blur @colorB,
+							
+							9px*@stepX 10px*@stepY @blur @colorA,
+							10px*@stepX 9px*@stepY @blur @colorB,
+							
+							8px*@stepX 9px*@stepY @blur @colorA,
+							9px*@stepX 8px*@stepY @blur @colorB,
+							
+							7px*@stepX 8px*@stepY @blur @colorA,
+							8px*@stepX 7px*@stepY @blur @colorB,
+							
+							6px*@stepX 7px*@stepY @blur @colorA,
+							7px*@stepX 6px*@stepY @blur @colorB,
+							
+							5px*@stepX 6px*@stepY @blur @colorA,
+							6px*@stepX 5px*@stepY @blur @colorB,
+							
+							4px*@stepX 5px*@stepY @blur @colorA,
+							5px*@stepX 4px*@stepY @blur @colorB,						
+							
+							
+							3px*@stepX 4px*@stepY @blur @colorA,
+							4px*@stepX 3px*@stepY @blur @colorB,
+							
+							
+							
+							2px*@stepX 3px*@stepY @blur @colorA,
+							3px*@stepX 2px*@stepY @blur @colorB,
+							
+							
+							1px*@stepX 2px*@stepY @blur @colorA,
+							2px*@stepX 1px*@stepY @blur @colorB,
+							
+							0px*@stepX 1px*@stepY @blur @colorA,
+							1px*@stepX 0px*@stepY @blur @colorB;
+}
+
+
+
+.long-shadow(@color:rgba(0,0,0,.3),@stepX:1,@stepY:1,@blur:0){
+	text-shadow:1px*@stepX 1px*@stepY @blur @color, 
+							2px*@stepX 2px*@stepY @blur @color,
+							3px*@stepX 3px*@stepY @blur @color,
+							4px*@stepX 4px*@stepY @blur @color,
+							5px*@stepX 5px*@stepY @blur @color,
+							6px*@stepX 6px*@stepY @blur @color,
+							7px*@stepX 7px*@stepY @blur @color,
+							8px*@stepX 8px*@stepY @blur @color,
+							9px*@stepX 9px*@stepY @blur @color,
+							10px*@stepX 10px*@stepY @blur @color,
+							11px*@stepX 11px*@stepY @blur @color,
+							12px*@stepX 12px*@stepY @blur @color,
+							13px*@stepX 13px*@stepY @blur @color,
+							14px*@stepX 14px*@stepY @blur @color,
+							15px*@stepX 15px*@stepY @blur @color,
+							16px*@stepX 16px*@stepY @blur @color,
+							17px*@stepX 17px*@stepY @blur @color,
+							18px*@stepX 18px*@stepY @blur @color,
+							19px*@stepX 19px*@stepY @blur @color,
+							20px*@stepX 20px*@stepY @blur @color,
+							21px*@stepX 21px*@stepY @blur @color,
+							22px*@stepX 22px*@stepY @blur @color,
+							23px*@stepX 23px*@stepY @blur @color,
+							24px*@stepX 24px*@stepY @blur @color,
+							25px*@stepX 25px*@stepY @blur @color,
+							26px*@stepX 26px*@stepY @blur @color,
+							27px*@stepX 27px*@stepY @blur @color,
+							28px*@stepX 28px*@stepY @blur @color,
+							29px*@stepX 29px*@stepY @blur @color,
+							30px*@stepX 30px*@stepY @blur @color,
+							30px*@stepX 30px*@stepY @blur @color,
+							31px*@stepX 31px*@stepY @blur @color,
+							32px*@stepX 32px*@stepY @blur @color,
+							33px*@stepX 33px*@stepY @blur @color,
+							34px*@stepX 34px*@stepY @blur @color,
+							35px*@stepX 35px*@stepY @blur @color,
+							36px*@stepX 36px*@stepY @blur @color,
+							37px*@stepX 37px*@stepY @blur @color,
+							38px*@stepX 38px*@stepY @blur @color,
+							39px*@stepX 39px*@stepY @blur @color,
+							40px*@stepX 40px*@stepY @blur @color,
+							41px*@stepX 41px*@stepY @blur @color,
+							42px*@stepX 42px*@stepY @blur @color,
+							43px*@stepX 43px*@stepY @blur @color,
+							44px*@stepX 44px*@stepY @blur @color,
+							45px*@stepX 45px*@stepY @blur @color,
+							46px*@stepX 46px*@stepY @blur @color,
+							47px*@stepX 47px*@stepY @blur @color,
+							48px*@stepX 48px*@stepY @blur @color,
+							49px*@stepX 49px*@stepY @blur @color,
+							50px*@stepX 50px*@stepY @blur @color,
+							51px*@stepX 51px*@stepY @blur @color,
+							52px*@stepX 52px*@stepY @blur @color,
+							53px*@stepX 53px*@stepY @blur @color,
+							54px*@stepX 54px*@stepY @blur @color,
+							55px*@stepX 55px*@stepY @blur @color,
+							56px*@stepX 56px*@stepY @blur @color,
+							57px*@stepX 57px*@stepY @blur @color,
+							58px*@stepX 58px*@stepY @blur @color,
+							59px*@stepX 59px*@stepY @blur @color;			
+}
+.fading-long-shadow(@start-color:white,@end-color:black,@stepX:1,@stepY:1,@rate:1,@blur:0){
+	text-shadow:1px*@stepX 1px*@stepY @blur mix(@end-color,@start-color,(@rate*5%)),
+							2px*@stepX 2px*@stepY @blur mix(@end-color,@start-color,(@rate*10%)),
+							3px*@stepX 3px*@stepY @blur mix(@end-color,@start-color,(@rate*15%)),
+							4px*@stepX 4px*@stepY @blur mix(@end-color,@start-color,(@rate*20%)),
+							5px*@stepX 5px*@stepY @blur mix(@end-color,@start-color,(@rate*25%)),
+							6px*@stepX 6px*@stepY @blur mix(@end-color,@start-color,(@rate*30%)),
+							7px*@stepX 7px*@stepY @blur mix(@end-color,@start-color,(@rate*35%)),
+							8px*@stepX 8px*@stepY @blur mix(@end-color,@start-color,(@rate*40%)),
+							9px*@stepX 9px*@stepY @blur mix(@end-color,@start-color,(@rate*45%)),
+							10px*@stepX 10px*@stepY @blur mix(@end-color,@start-color,(@rate*50%)),
+			 				11px*@stepX 11px*@stepY @blur mix(@end-color,@start-color,(@rate*55%)),
+							12px*@stepX 12px*@stepY @blur mix(@end-color,@start-color,(@rate*60%)),
+							13px*@stepX 13px*@stepY @blur mix(@end-color,@start-color,(@rate*65%)),
+							14px*@stepX 14px*@stepY @blur mix(@end-color,@start-color,(@rate*70%)),
+							15px*@stepX 15px*@stepY @blur mix(@end-color,@start-color,(@rate*75%)),
+							16px*@stepX 16px*@stepY @blur mix(@end-color,@start-color,(@rate*80%)),
+							17px*@stepX 17px*@stepY @blur mix(@end-color,@start-color,(@rate*85%)),
+							18px*@stepX 18px*@stepY @blur mix(@end-color,@start-color,(@rate*90%)),
+							19px*@stepX 19px*@stepY @blur mix(@end-color,@start-color,(@rate*95%)),
+							20px*@stepX 20px*@stepY @blur mix(@end-color,@start-color,(@rate*100%));
+}
+.fake-knockout-shadow(@background-color:white,@shadow-color:black,@stepX:1,@stepY:1){
+	color:@background-color;
+	background:@background-color;
+	padding-bottom:(@stepX+@stepY)*30px;
+	.long-shadow(@shadow-color,@stepX,@stepY);
+}
+
+
+/*|   Box Effects |*/
+/*+---------------+*/
+.pop-box(@bevel-height:4px,@color:#444){
+	position:relative;
+	left:@bevel-height;
+	margin-top:@bevel-height;
+	margin-bottom:@bevel-height;
+	&:before{
+			position:absolute;
+			display:block;
+			content:"";
+			width:100%;
+			height:@bevel-height;
+			top:-@bevel-height;
+			left:-(@bevel-height/2);
+			background:(@color)+20;
+			transform:skew(45deg);
+		}
+	&:after{
+		position:absolute;
+		display:block;
+		content:"";
+		width:100%;
+		height:@bevel-height;
+		bottom:-@bevel-height;
+		left:-(@bevel-height/2);
+		background:(@color)-20;
+		transform:skew(-45deg);
+	}
+}
+.push-box(@bevel-height:4px,@color:#444){
+	position:relative;
+	left:-@bevel-height;
+	margin-top:@bevel-height;
+	margin-bottom:@bevel-height;
+	&:before{
+			position:absolute;
+			display:block;
+			content:"";
+			width:100%;
+			height:@bevel-height;
+			top:-@bevel-height;
+			left:(@bevel-height/2);
+			background:(@color)+20;
+			transform:skew(-45deg);
+		}
+	&:after{
+		position:absolute;
+		display:block;
+		content:"";
+		width:100%;
+		height:@bevel-height;
+		bottom:-@bevel-height;
+		left:(@bevel-height/2);
+		background:(@color)-20;
+		transform:skew(45deg);
+	}
+}
+
+.long-box-shadow(@color:rgba(0,0,0,.3),@stepX:1,@stepY:1,@blur:0){
+	box-shadow: 1px*@stepX 1px*@stepY @blur @color, 
+							2px*@stepX 2px*@stepY @blur @color,
+							3px*@stepX 3px*@stepY @blur @color,
+							4px*@stepX 4px*@stepY @blur @color,
+							5px*@stepX 5px*@stepY @blur @color,
+							6px*@stepX 6px*@stepY @blur @color,
+							7px*@stepX 7px*@stepY @blur @color,
+							8px*@stepX 8px*@stepY @blur @color,
+							9px*@stepX 9px*@stepY @blur @color,
+							10px*@stepX 10px*@stepY @blur @color,
+							11px*@stepX 11px*@stepY @blur @color,
+							12px*@stepX 12px*@stepY @blur @color,
+							13px*@stepX 13px*@stepY @blur @color,
+							14px*@stepX 14px*@stepY @blur @color,
+							15px*@stepX 15px*@stepY @blur @color,
+							16px*@stepX 16px*@stepY @blur @color,
+							17px*@stepX 17px*@stepY @blur @color,
+							18px*@stepX 18px*@stepY @blur @color,
+							19px*@stepX 19px*@stepY @blur @color,
+							20px*@stepX 20px*@stepY @blur @color,
+							21px*@stepX 21px*@stepY @blur @color,
+							22px*@stepX 22px*@stepY @blur @color,
+							23px*@stepX 23px*@stepY @blur @color,
+							24px*@stepX 24px*@stepY @blur @color,
+							25px*@stepX 25px*@stepY @blur @color,
+							26px*@stepX 26px*@stepY @blur @color,
+							27px*@stepX 27px*@stepY @blur @color,
+							28px*@stepX 28px*@stepY @blur @color,
+							29px*@stepX 29px*@stepY @blur @color,
+							30px*@stepX 30px*@stepY @blur @color,
+							30px*@stepX 30px*@stepY @blur @color,
+							31px*@stepX 31px*@stepY @blur @color,
+							32px*@stepX 32px*@stepY @blur @color,
+							33px*@stepX 33px*@stepY @blur @color,
+							34px*@stepX 34px*@stepY @blur @color,
+							35px*@stepX 35px*@stepY @blur @color,
+							36px*@stepX 36px*@stepY @blur @color,
+							37px*@stepX 37px*@stepY @blur @color,
+							38px*@stepX 38px*@stepY @blur @color,
+							39px*@stepX 39px*@stepY @blur @color,
+							40px*@stepX 40px*@stepY @blur @color,
+							41px*@stepX 41px*@stepY @blur @color,
+							42px*@stepX 42px*@stepY @blur @color,
+							43px*@stepX 43px*@stepY @blur @color,
+							44px*@stepX 44px*@stepY @blur @color,
+							45px*@stepX 45px*@stepY @blur @color,
+							46px*@stepX 46px*@stepY @blur @color,
+							47px*@stepX 47px*@stepY @blur @color,
+							48px*@stepX 48px*@stepY @blur @color,
+							49px*@stepX 49px*@stepY @blur @color,
+							50px*@stepX 50px*@stepY @blur @color,
+							51px*@stepX 51px*@stepY @blur @color,
+							52px*@stepX 52px*@stepY @blur @color,
+							53px*@stepX 53px*@stepY @blur @color,
+							54px*@stepX 54px*@stepY @blur @color,
+							55px*@stepX 55px*@stepY @blur @color,
+							56px*@stepX 56px*@stepY @blur @color,
+							57px*@stepX 57px*@stepY @blur @color,
+							58px*@stepX 58px*@stepY @blur @color,
+							59px*@stepX 59px*@stepY @blur @color;
+}
+.fading-box-shadow(@start-color:white,@end-color:black,@stepX:1,@stepY:1,@rate:1,@blur:0){
+	box-shadow: 1px*@stepX 1px*@stepY @blur mix(@end-color,@start-color,(@rate*5%)),
+							2px*@stepX 2px*@stepY @blur mix(@end-color,@start-color,(@rate*10%)),
+							3px*@stepX 3px*@stepY @blur mix(@end-color,@start-color,(@rate*15%)),
+							4px*@stepX 4px*@stepY @blur mix(@end-color,@start-color,(@rate*20%)),
+							5px*@stepX 5px*@stepY @blur mix(@end-color,@start-color,(@rate*25%)),
+							6px*@stepX 6px*@stepY @blur mix(@end-color,@start-color,(@rate*30%)),
+							7px*@stepX 7px*@stepY @blur mix(@end-color,@start-color,(@rate*35%)),
+							8px*@stepX 8px*@stepY @blur mix(@end-color,@start-color,(@rate*40%)),
+							9px*@stepX 9px*@stepY @blur mix(@end-color,@start-color,(@rate*45%)),
+							10px*@stepX 10px*@stepY @blur mix(@end-color,@start-color,(@rate*50%)),
+			 				11px*@stepX 11px*@stepY @blur mix(@end-color,@start-color,(@rate*55%)),
+							12px*@stepX 12px*@stepY @blur mix(@end-color,@start-color,(@rate*60%)),
+							13px*@stepX 13px*@stepY @blur mix(@end-color,@start-color,(@rate*65%)),
+							14px*@stepX 14px*@stepY @blur mix(@end-color,@start-color,(@rate*70%)),
+							15px*@stepX 15px*@stepY @blur mix(@end-color,@start-color,(@rate*75%)),
+							16px*@stepX 16px*@stepY @blur mix(@end-color,@start-color,(@rate*80%)),
+							17px*@stepX 17px*@stepY @blur mix(@end-color,@start-color,(@rate*85%)),
+							18px*@stepX 18px*@stepY @blur mix(@end-color,@start-color,(@rate*90%)),
+							19px*@stepX 19px*@stepY @blur mix(@end-color,@start-color,(@rate*95%)),
+							20px*@stepX 20px*@stepY @blur mix(@end-color,@start-color,(@rate*100%));
+}

@@ -1,0 +1,105 @@
+body{
+	color:white;
+}
+
+.a{
+	position:relative;
+	background:red;
+	transition: all 3s;
+	width:30px;
+	height:30px;
+	bottom:-900px;
+	&:hover{
+		background:blue;
+		transition: all 3s;
+	}
+}
+.b{
+	position:relative;
+	background:red;
+	transition: all 3s;
+	width:30px;
+	height:30px;
+	bottom:-900px;
+	right:-50px;
+	&:hover{
+		background:blue;
+		transition: all 3s;
+	}
+}
+.c{
+	position:absolute;
+	background:inherit;
+	transition: all 0 ease-in 4s;
+	top:-10px;
+	width:100px;
+	height:10px;
+	&:hover{
+		background:blue;
+		transition: all 1s;
+	}
+}
+
+@iterations: 30;
+
+.loopingClass (@index) when (@index > 0) {
+	@time:1s;
+	@delay:((@index))/30*3s;
+	@background-color:#333;
+	@highlight-color:cyan;
+	@height:5px;
+	@bevel-height:5px;
+	
+	.fade-@{index} {
+		position:absolute;	
+		width:100%;
+		height:@height;
+		box-shadow:0 @bevel-height*2 @background-color;
+		background:@background-color;
+		top:-(@height+(@bevel-height*2));
+		transition:all @time @delay;
+		&:before{
+			position:absolute;
+			content:"";
+			height:@bevel-height;
+			top:-@bevel-height;
+			width:100%;
+			background:@background-color;
+			left:0;
+			transition:all @time @delay;
+		}
+		&:after{			
+			position:absolute;
+			content:"";
+			height:@bevel-height;
+			bottom:-@bevel-height;
+			width:100%;
+			background:@background-color;
+			left:0;
+			transition:all @time @delay;
+		}			
+		&:hover{
+			padding:0;
+			box-shadow:0 0 0 @highlight-color;
+			background:@background-color+22;
+			&:before{
+				transform:skew(45deg);
+				left:-(@bevel-height/2);
+				background:(@background-color)+11;
+			}
+			&:after{
+				transform:skew(-45deg);
+				left:-(@bevel-height/2);
+				background:(@background-color)-11;
+			}
+		}
+	}
+	.loopingClass(@index - 1);
+}
+
+// end the loop when index is 0
+.loopingClass (0) {}
+
+// "call" the loopingClass the first time with highest value
+.loopingClass (@iterations);
+
